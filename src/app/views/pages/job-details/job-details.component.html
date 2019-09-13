@@ -1,0 +1,21 @@
+<div class="col-xl-12">
+  <kt-portlet [class]="'kt-portlet--height-fluid'">
+    <kt-portlet-header
+      [title]="'Job Description'"
+      [class]="'kt-portlet__head--lg kt-portlet__head--noborder kt-portlet__head--break-sm'">
+    </kt-portlet-header>
+    <kt-portlet-body
+      [class]="'kt-portlet__body--fit'"
+      style="padding: 15px 25px;">
+      <div
+        class="contentEdit"
+        contenteditable
+        (input)="onNameChange($event.target.innerHTML)">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio enim illo quod sed voluptas esse quae fugiat, eius nostrum, vero ab labore necessitatibus unde, repellendus ut aspernatur nisi deleniti cumque.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio enim illo quod sed voluptas esse quae fugiat, eius nostrum, vero ab labore necessitatibus unde, repellendus ut aspernatur nisi deleniti cumque.
+      </div>
+      <h4 style="margin-top: 15px;">Matched Candidate profile</h4>
+      <kt-data-table></kt-data-table>
+    </kt-portlet-body>
+  </kt-portlet>
+</div>
