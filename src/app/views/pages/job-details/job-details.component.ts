@@ -34,9 +34,8 @@ export class JobDetailsComponent implements OnInit {
 
   ngOnInit() {
     this.shareDataService.getData().subscribe(data => {
-      // this.jobSimilarityData = data.newdata;
-      this.jobSimilarityData.connect().next(data.newdata);
-
+      this.jobSimilarityData = data.newdata;
+      console.log(this.jobSimilarityData);
     });
   }
 

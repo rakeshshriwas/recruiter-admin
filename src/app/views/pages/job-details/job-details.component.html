@@ -15,14 +15,13 @@
         <div
           class="contentEdit"
           contenteditable>
-          {{jobSimilarityData.getJobInfo().getJobId()}}
+          lorem
         </div>
         <h4 style="margin-top: 15px;">Matched Candidate profile</h4>
         <div class="col-xl-12">
           <table
-            *ngIf="jobSimilarityData"
             mat-table
-            [dataSource]="jobSimilarityData"
+            [dataSource]="dataSource"
             class="mat-elevation-z8">
 
             <!-- - Note that these columns can be defined in any order.
@@ -38,7 +37,7 @@
               <td
                 mat-cell
                 *matCellDef="let element">
-                {{element.getJobInfo().getJobId()}}
+                {{element.jobCode}}
               </td>
             </ng-container>
 
