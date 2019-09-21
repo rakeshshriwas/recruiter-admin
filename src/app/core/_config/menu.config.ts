@@ -7,13 +7,13 @@ export class MenuConfig {
 		aside: {
 			self: {},
 			items: [
-				{
-					title: 'Dashboard',
-					root: true,
-					icon: 'flaticon2-architecture-and-city',
-					page: '/dashboard',
-					bullet: 'dot',
-				},
+				// {
+				// 	title: 'Dashboard',
+				// 	root: true,
+				// 	icon: 'flaticon2-architecture-and-city',
+				// 	page: '/dashboard',
+				// 	bullet: 'dot',
+				// },
 				{
 					title: 'Job List',
 					root: true,
@@ -28,13 +28,13 @@ export class MenuConfig {
 					page: '/postjob',
 					bullet: 'dot'
 				},
-				{
-					title: 'Profile',
-					root: true,
-					icon: 'flaticon-profile-1',
-					page: '/profile',
-					bullet: 'dot'
-				}
+				// {
+				// 	title: 'Profile',
+				// 	root: true,
+				// 	icon: 'flaticon-profile-1',
+				// 	page: '/profile',
+				// 	bullet: 'dot'
+				// }
 			]
 		},
 	};

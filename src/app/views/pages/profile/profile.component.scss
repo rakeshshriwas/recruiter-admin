@@ -1,0 +1,23 @@
+.contentEdit{
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #d8dce7;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 300px;
+  }
+  div[contenteditable]:focus {
+    outline: none;
+  }
+  .kt-widget.kt-widget--user-profile-3 .kt-widget__top .kt-widget__content .kt-widget__info .kt-widget__progress{
+    max-width: 420px;
+  }
+  .span-label{
+    padding-right: 2rem;
+    padding-left: 0px !important;
+    color: #74788d !important;
+    font-weight: 500 !important;
+    font-size: 13px !important;
+    margin-bottom: 3px !important;
+}

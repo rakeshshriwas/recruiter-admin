@@ -9,7 +9,7 @@ export class PageConfig {
 		jobs: {
 			page: {
 				'title': 'Job List',
-				'desc': 'Latest Jobe'
+				'desc': 'Current Opening'
 			}
 		},
 		postjob: {
@@ -21,12 +21,31 @@ export class PageConfig {
 		profile: {
 			page: {
 				'title': 'Profile',
-				'desc': 'My Profile'
+				'desc': 'Job Id : 1001'
 			}
 		},
 		jobdetail: {
 			page: {
 				'title': 'Job Detail',
+				'desc': 'Job Id : 1001',
+				'totalCount': '20 Resume Matched'
+			}
+		},
+		myprofile: {
+			page: {
+				'title': 'My Profile',
+				'desc': ''
+			}
+		},
+		editmyprofile: {
+			page: {
+				'title': 'Edit My Profile',
+				'desc': ''
+			}
+		},
+		editprofile: {
+			page: {
+				'title': 'Edit Profile',
 				'desc': ''
 			}
 		}

@@ -1,0 +1,19 @@
+<div>
+      <table>
+        <thead>
+          <tr>
+            <th>Job Id</th>
+            <th>Job Description</th>
+            <th># Profiles</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let job of job_similarityList">
+            <td>{{ job.getJobInfo().getJobId() }}</td>
+            <td>
+              {{ job.getJobInfo().getJobDescription() }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>

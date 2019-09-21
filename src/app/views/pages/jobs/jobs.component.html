@@ -1,14 +1,72 @@
-<div class="col-xl-12">
-  <kt-portlet [class]="'kt-portlet--height-fluid'">
-    <kt-portlet-header
-      [title]="'Job List'"
-      [class]="'kt-portlet__head--lg kt-portlet__head--noborder kt-portlet__head--break-sm'">
-      <ng-container ktPortletTools>
-        <kt-context-menu></kt-context-menu>
+<mat-card>
+  <div class="col-xl-12">
+    <mat-spinner *ngIf="showSpinLoader"></mat-spinner>
+
+    <table
+      *ngIf="job_similarityList"
+      mat-table
+      [dataSource]="job_similarityList"
+      class="mat-elevation-z8">
+
+      <ng-container matColumnDef="jobCode">
+        <th
+          mat-header-cell
+          *matHeaderCellDef>
+          Job Code
+        </th>
+        <td
+          mat-cell
+          *matCellDef="let element">
+          {{element.getJobInfo().getJobId()}}
+        </td>
       </ng-container>
-    </kt-portlet-header>
-    <kt-portlet-body [class]="'kt-portlet__body--fit'">
-      <kt-data-table></kt-data-table>
-    </kt-portlet-body>
-  </kt-portlet>
-</div>
+
+      <ng-container matColumnDef="jobPosition">
+        <th
+          mat-header-cell
+          *matHeaderCellDef>
+          Job Position
+        </th>
+        <td
+          mat-cell
+          *matCellDef="let element">
+          <a
+            href="javascript:;"
+            (click)="getDetails(element)">
+            {{element.getJobInfo().getJobDescription()}}
+          </a>
+        </td>
+      </ng-container>
+
+      <!-- profileMatched Column -->
+      <ng-container matColumnDef="profileMatched">
+        <th
+          mat-header-cell
+          *matHeaderCellDef>
+          Profile Matched
+        </th>
+
+        <td
+          mat-cell
+          *matCellDef="let element">
+          <span class="btn btn-label-brand btn-sm btn-upper"> {{element.profileMatched}}</span>
+
+        </td>
+      </ng-container>
+
+      <tbody>
+        <tr
+          mat-header-row
+          *matHeaderRowDef="displayedColumns"></tr>
+        <tr
+          mat-row
+          *matRowDef="let row; columns: displayedColumns;"></tr>
+      </tbody>
+    </table>
+    <mat-paginator
+      [length]="100"
+      [pageSize]="10"
+      [pageSizeOptions]="[5, 10, 25, 100]">
+    </mat-paginator>
+  </div>
+</mat-card>

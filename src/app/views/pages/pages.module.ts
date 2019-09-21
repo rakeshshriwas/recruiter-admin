@@ -15,10 +15,14 @@ import { PostjobComponent } from './postjob/postjob.component';
 import { ProfileComponent } from './profile/profile.component';
 import { JobDetailsComponent } from './job-details/job-details.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatButtonModule, MatInputModule, MatFormFieldModule, MatCheckboxModule, MatIconModule } from '@angular/material';
+// tslint:disable-next-line: max-line-length
+import { MatButtonModule, MatInputModule, MatFormFieldModule, MatCheckboxModule, MatIconModule, MatTableModule, MatChipsModule, MatPaginatorModule, MatProgressSpinnerModule } from '@angular/material';
+import { MyprofileComponent } from './myprofile/myprofile.component';
+import { EditMyprofileComponent } from './edit-myprofile/edit-myprofile.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 @NgModule({
-	declarations: [JobsComponent, PostjobComponent, ProfileComponent, JobDetailsComponent],
+	declarations: [JobsComponent, PostjobComponent, ProfileComponent, JobDetailsComponent, MyprofileComponent, EditMyprofileComponent, EditProfileComponent],
 	exports: [],
 	imports: [
 		RouterModule,
@@ -33,7 +37,8 @@ import { MatButtonModule, MatInputModule, MatFormFieldModule, MatCheckboxModule,
 		MatCheckboxModule,
 		MatCardModule,
 		MatTabsModule,
-		MatIconModule
+		MatIconModule,
+		MatTableModule, MatChipsModule, MatChipsModule, MatPaginatorModule, MatProgressSpinnerModule
 	],
 	providers: []
 })

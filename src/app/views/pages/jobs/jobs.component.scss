@@ -1,0 +1,20 @@
+.btn-label-brand{
+    font-weight: 700;
+    font-size: 1rem;
+}
+td.mat-cell:last-of-type, td.mat-footer-cell:last-of-type, th.mat-header-cell:last-of-type{
+    text-align: center;
+}
+table{
+    width: 100%;
+    box-shadow: none;
+}
+.mat-spinner {
+    width: 24px !important; 
+    height: 24px !important; 
+    margin: 5px auto 0px auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+  }

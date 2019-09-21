@@ -1,4 +1,4 @@
-import {LayoutConfigModel} from '../_base/layout';
+import { LayoutConfigModel } from '../_base/layout';
 
 export class LayoutConfig {
 	public defaults: LayoutConfigModel = {
@@ -97,7 +97,7 @@ export class LayoutConfig {
 		},
 		'aside': {
 			'self': {
-				'skin': 'dark',
+				'skin': 'light',
 				'display': true,
 				'fixed': true,
 				'minimize': {

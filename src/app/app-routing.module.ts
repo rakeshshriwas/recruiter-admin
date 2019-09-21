@@ -9,6 +9,9 @@ import { JobsComponent } from './views/pages/jobs/jobs.component';
 import { PostjobComponent } from './views/pages/postjob/postjob.component';
 import { ProfileComponent } from './views/pages/profile/profile.component';
 import { JobDetailsComponent } from './views/pages/job-details/job-details.component';
+import { MyprofileComponent } from './views/pages/myprofile/myprofile.component';
+import { EditMyprofileComponent } from './views/pages/edit-myprofile/edit-myprofile.component';
+import { EditProfileComponent } from './views/pages/edit-profile/edit-profile.component';
 
 const routes: Routes = [
 	{ path: 'auth', loadChildren: () => import('./views/pages/auth/auth.module').then(m => m.AuthModule) },
@@ -37,7 +40,19 @@ const routes: Routes = [
 			{
 				path: 'jobdetail',
 				component: JobDetailsComponent
-			}
+			},
+			{
+				path: 'myprofile',
+				component: MyprofileComponent
+			},
+			{
+				path: 'editmyprofile',
+				component: EditMyprofileComponent
+			},
+			{
+				path: 'editprofile',
+				component: EditProfileComponent
+			},
 		]
 	},
 
