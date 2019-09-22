@@ -61,6 +61,7 @@ export class JobsComponent implements OnInit {
       (dashboardData: GetRecruiterDashboardResponse) => {
         this.showSpinLoader = false;
         this.job_similarityList.connect().next(dashboardData.getJobSimilarityList());
+        console.log(dashboardData.getJobSimilarityList());
       }
     );
   }

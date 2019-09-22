@@ -1,7 +1,8 @@
+import { GetRecruiterDashboardResponse, CandidateInfo, JobSimilarity } from './../../../proto/application_service_pb.d';
 import { ShareDataService } from './../servie/sharedataservice.service';
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { JobSimilarity } from '../../../proto/application_service_pb';
+import { MatTableDataSource } from '@angular/material';
 export interface PeriodicElement {
   jobPosition: string;
   jobCode: number;
@@ -29,13 +30,20 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class JobDetailsComponent implements OnInit {
   displayedColumns: string[] = ['jobCode', 'jobPosition', 'profileMatched', 'actions'];
   dataSource = ELEMENT_DATA;
-  jobSimilarityData: any;
+  jobData: JobSimilarity;
+  jobSimilarityData = new MatTableDataSource<JobSimilarity>();
   constructor(private shareDataService: ShareDataService) { }
 
   ngOnInit() {
-    this.shareDataService.getData().subscribe(data => {
-      this.jobSimilarityData = data.newdata;
-      console.log(this.jobSimilarityData);
+    this.shareDataService.currentMessage.subscribe(data => {
+      this.jobData = data;
+      // console.log(this.jobSimilarityData);
+      // console.log('---');
+      // console.log(this.jobSimilarityData.getCandidateInfoList()[0].getCandidateDescription());
+      // console.log(this.jobSimilarityData.getCandidateInfoList()[2].getSimilarityList()[2].getSimilarity());
+      // console.log('---');
+      this.jobSimilarityData.connect().next(data.getCandidateInfoList());
+      console.log(this.jobData.getJobInfo().getJobDescription());
     });
   }
 
